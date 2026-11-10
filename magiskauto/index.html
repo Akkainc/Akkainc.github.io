@@ -26,11 +26,11 @@
             <h1 class="text-4xl font-bold mb-4">MagiskAuto</h1>
             <p class="text-lg mb-8">Root your <strong>Google Pixel 6a</strong> or <strong>Samsung Galaxy Note 10</strong> with Magisk.
                 It shows you where to download your phone's exact firmware, then extracts and patches it for you.</p>
-            <a href="releases/v1.4.0/MagiskAuto.exe" download
+            <a href="releases/v1.4.1/MagiskAuto.exe" download
                class="inline-block bg-blue-600 text-white text-lg font-semibold px-8 py-4 rounded-full hover:bg-blue-700 shadow-lg">
                 Download MagiskAuto.exe for Windows
             </a>
-            <p class="text-sm text-blue-200 mt-4">Version 1.4.0 · 8.5 MB · Windows 10/11 (64-bit) · <a href="releases/" class="underline hover:text-white">All releases &amp; release notes</a></p>
+            <p class="text-sm text-blue-200 mt-4">Version 1.4.1 · 8.5 MB · Windows 10/11 (64-bit) · <a href="releases/" class="underline hover:text-white">All releases &amp; release notes</a></p>
             <button id="copy" class="mt-4 text-sm underline text-blue-200 hover:text-white">Copy link to share</button>
         </div>
     </section>
@@ -80,6 +80,11 @@
         </section>
 
         <section class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-3">Stuck on "Waiting for fastboot"?</h2>
+            <p class="text-gray-700">This almost always means Windows has no driver for the phone in fastboot mode. MagiskAuto offers to install the <a class="text-blue-700 underline" href="https://developer.android.com/studio/run/win-usb">Google USB Driver</a> for you. To do it by hand: with the phone on the "Fastboot Mode" screen, open <em>Device Manager</em> and right-click <em>Android</em> (it has a yellow warning sign). Choose <em>Update driver → Browse my computer</em> and pick the <code>usb_driver</code> folder. Also try another cable or USB port.</p>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-xl font-semibold mb-3">Where does it get Magisk?</h2>
             <p class="text-gray-700">You don't need to download or point to Magisk. MagiskAuto uses the Magisk app already on your phone, or a Magisk <code>.apk</code> in the phone's Download folder or next to the exe. Otherwise it fetches the latest Magisk from GitHub.</p>
         </section>
@@ -95,7 +100,7 @@
 
         <section class="text-sm text-gray-600 border-t pt-6">
             <p><strong>SHA-256</strong> of MagiskAuto.exe (to check your download):</p>
-            <code class="block bg-gray-200 p-2 rounded break-all mt-1">a909e3af7b9b50611dc9c3c4df38f00909f70d114d3a03ac6f5b3389909b3d7b</code>
+            <code class="block bg-gray-200 p-2 rounded break-all mt-1">2f087d7f2bd21a23b6cd396a61b0f3e49313d4db87c29dc276d642cfb3e3520a</code>
             <p class="mt-4">MagiskAuto uses the official <a class="text-blue-700 underline" href="https://github.com/topjohnwu/Magisk">Magisk</a> app's own patching tools. It isn't affiliated with Magisk, Google or Samsung.</p>
         </section>
     </main>
