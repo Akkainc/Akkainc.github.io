@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagiskAuto - AKKA INC</title>
+    <meta name="description" content="MagiskAuto: extract and Magisk-patch firmware for the Google Pixel 6a and Samsung Galaxy Note 10. Free Windows download.">
+    <meta property="og:title" content="MagiskAuto - Magisk patcher for Pixel 6a and Galaxy Note 10">
+    <meta property="og:description" content="Shows where to download your phone's firmware, extracts it, and patches it with Magisk automatically. Free Windows .exe.">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold">AKKA INC</a>
+            <a href="/" class="hover:text-blue-300">Home</a>
+        </div>
+    </nav>
+
+    <section class="bg-blue-800 text-white py-16 px-4">
+        <div class="container mx-auto text-center max-w-3xl">
+            <h1 class="text-4xl font-bold mb-4">MagiskAuto</h1>
+            <p class="text-lg mb-8">Root your <strong>Google Pixel 6a</strong> or <strong>Samsung Galaxy Note 10</strong> with Magisk.
+                It shows you where to download your phone's exact firmware, then extracts and patches it for you.</p>
+            <a href="MagiskAuto.exe" download
+               class="inline-block bg-blue-600 text-white text-lg font-semibold px-8 py-4 rounded-full hover:bg-blue-700 shadow-lg">
+                Download MagiskAuto.exe for Windows
+            </a>
+            <p class="text-sm text-blue-200 mt-4">Version 1.2.0 · 8.5 MB · Windows 10/11 (64-bit)</p>
+            <button id="copy" class="mt-4 text-sm underline text-blue-200 hover:text-white">Copy link to share</button>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 py-12 max-w-3xl space-y-10">
+        <section class="bg-yellow-50 border border-yellow-300 rounded-lg p-5">
+            <h2 class="font-bold text-lg mb-2">⚠️ Before you start</h2>
+            <ul class="list-disc pl-5 space-y-1">
+                <li>Your phone's bootloader must be <strong>unlocked</strong> first, and unlocking <strong>erases everything</strong> on the phone. Back up first.</li>
+                <li>US and Canada Note 10 models (SM-N970U / U1 / W) can't be unlocked, so they can't be rooted. The international Exynos <strong>SM-N970F</strong> works.</li>
+                <li>Rooting can void your warranty and stop some apps (such as banking apps) from working. You use this at your own risk.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold mb-4">How to use it</h2>
+            <ol class="list-decimal pl-5 space-y-3">
+                <li>Download <strong>MagiskAuto.exe</strong> above.</li>
+                <li>Download <a class="text-blue-700 underline" href="https://developer.android.com/tools/releases/platform-tools">Android platform-tools</a> and unzip it, so the <code class="bg-gray-200 px-1 rounded">platform-tools</code> folder sits next to <code class="bg-gray-200 px-1 rounded">MagiskAuto.exe</code>.</li>
+                <li>On the phone, turn on <strong>USB debugging</strong>: <em>Settings → About phone</em>, tap <em>Build number</em> 7 times, then <em>Developer options → USB debugging</em>. Plug the phone into the PC and allow the connection.</li>
+                <li>Double-click <strong>MagiskAuto.exe</strong> and choose your phone. It shows the link to the right firmware for your phone.</li>
+                <li>When the firmware has downloaded, drag the file into the MagiskAuto window and press Enter. It does the rest.</li>
+            </ol>
+            <p class="mt-4 text-sm text-gray-600">Windows may show a "Windows protected your PC" warning because the app isn't code-signed. Click <strong>More info → Run anyway</strong>.</p>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-3">Google Pixel 6a</h3>
+                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>Firmware: <a class="text-blue-700 underline" href="https://developers.google.com/android/images#bluejay">Google factory images</a> (the factory image for your build, not the OTA)</li>
+                    <li>Patches <code>boot.img</code></li>
+                    <li>Can flash it for you automatically</li>
+                    <li>Keeps a copy of the stock image so you can undo it</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-3">Samsung Galaxy Note 10</h3>
+                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>Firmware: <a class="text-blue-700 underline" href="https://samfw.com/firmware/SM-N970F">SamFw</a>, <a class="text-blue-700 underline" href="https://www.sammobile.com/samsung/galaxy-note-10/firmware/SM-N970F/">SamMobile</a> or <a class="text-blue-700 underline" href="https://github.com/zacharee/SamloaderKotlin/releases">Bifrost</a></li>
+                    <li>Patches the AP file for Odin</li>
+                    <li>Puts the BL, CP and CSC files next to it, ready for Odin</li>
+                    <li>Afterwards, start the phone with <strong>Vol Up + Power</strong> (let go at the warning) to boot with root</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="text-sm text-gray-600 border-t pt-6">
+            <p><strong>SHA-256</strong> of MagiskAuto.exe (to check your download):</p>
+            <code class="block bg-gray-200 p-2 rounded break-all mt-1">bf91eeb92a1bc79df64e2bc6abf4c4ad6838a1e27e8737b294d39451a02f4165</code>
+            <p class="mt-4">MagiskAuto uses the official <a class="text-blue-700 underline" href="https://github.com/topjohnwu/Magisk">Magisk</a> app's own patching tools. It isn't affiliated with Magisk, Google or Samsung.</p>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>© 2026 AKKA INC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('copy').addEventListener('click', async function () {
+            try {
+                await navigator.clipboard.writeText(location.href.split('#')[0]);
+                this.textContent = 'Link copied!';
+            } catch (e) {
+                this.textContent = location.href.split('#')[0];
+            }
+        });
+    </script>
+</body>
+</html>
