@@ -26,12 +26,12 @@
             <h1 class="text-4xl font-bold mb-4">MagiskAuto</h1>
             <p class="text-lg mb-8">Root your <strong>Google Pixel 6a</strong> or <strong>Samsung Galaxy Note 10</strong> with Magisk.
                 It shows you where to download your phone's exact firmware, then extracts and patches it for you.</p>
-            <a href="releases/v1.6.1/MagiskAuto-Package.zip" download
+            <a href="releases/v1.7.0/MagiskAuto-Package.zip" download
                class="inline-block bg-blue-600 text-white text-lg font-semibold px-8 py-4 rounded-full hover:bg-blue-700 shadow-lg">
                 Download the MagiskAuto package
             </a>
             <p class="text-sm text-blue-200 mt-4">Everything in one zip: MagiskAuto.exe, the Magisk app and a quick-start guide</p>
-            <p class="text-sm text-blue-200 mt-1">Version 1.6.1 · 18 MB · Windows 10/11 (64-bit) · <a href="releases/" class="underline hover:text-white">All releases</a></p>
+            <p class="text-sm text-blue-200 mt-1">Version 1.7.0 · 18 MB · Windows 10/11 (64-bit) · <a href="releases/" class="underline hover:text-white">All releases</a></p>
             <button id="copy" class="mt-4 text-sm underline text-blue-200 hover:text-white">Copy link to share</button>
         </div>
     </section>
@@ -55,7 +55,7 @@
                 <li>When the firmware has downloaded, drag the file into the MagiskAuto window and press Enter. It does the rest. The file can be in any folder, and you don't need to unzip it.</li>
                 <li>Your results are saved in a <code class="bg-gray-200 px-1 rounded">magisk-output</code> folder next to <code class="bg-gray-200 px-1 rounded">MagiskAuto.exe</code>, or in <code class="bg-gray-200 px-1 rounded">Documents\MagiskAuto</code> if it can't save there. You need about <strong>12 GB free</strong> for the Note 10, or 4 GB for the Pixel.</li>
             </ol>
-            <p class="mt-4 text-sm text-gray-600"><strong>Note 10 only:</strong> flashing needs <strong>Odin</strong>, Samsung's flashing tool. Samsung doesn't publish it, so MagiskAuto doesn't download it automatically. Save an Odin zip (e.g. Odin3 v3.14.4 from <a class="text-blue-700 underline" href="https://xdaforums.com/search/?q=Odin3+v3.14.4&amp;t=post">XDA Developers</a>) to your Downloads folder. MagiskAuto finds it, unzips it, and opens it for you at the flashing step.</p>
+            <p class="mt-4 text-sm text-gray-600"><strong>Note 10 only:</strong> flashing needs <strong>Odin</strong>, Samsung's flashing tool. Samsung doesn't publish it, so MagiskAuto doesn't download it automatically. Save an Odin zip (e.g. Odin3 v3.14.4 from <a class="text-blue-700 underline" href="https://xdaforums.com/search/?q=Odin3+v3.14.4&amp;t=post">XDA Developers</a>) to your Downloads folder. MagiskAuto finds it and does the flashing for you: it puts the phone in download mode, loads the files into Odin, clicks Start and waits for PASS.</p>
             <p class="mt-2 text-sm text-gray-600">If Windows doesn't see the phone, install the <a class="text-blue-700 underline" href="https://developer.android.com/studio/run/win-usb">Google USB Driver</a> (Pixel) or the <a class="text-blue-700 underline" href="https://developer.samsung.com/android-usb-driver">Samsung USB Driver</a> (Note 10).</p>
             <p class="mt-2 text-sm text-gray-600">Windows may show a "Windows protected your PC" warning because the app isn't code-signed. Click <strong>More info → Run anyway</strong>.</p>
             <p class="mt-2 text-sm text-gray-600">If your browser says <strong>"Virus detected"</strong>, it's a false alarm caused by the app not being code-signed. Open <em>Windows Security → Virus &amp; threat protection → Protection history</em>, choose the MagiskAuto entry, then <strong>Actions → Allow on device</strong>, and download it again.</p>
@@ -76,7 +76,7 @@
                 <ul class="list-disc pl-5 space-y-1 text-gray-700">
                     <li>Firmware: <a class="text-blue-700 underline" href="https://samfw.com/firmware/SM-N970F">SamFw</a>, <a class="text-blue-700 underline" href="https://www.sammobile.com/samsung/galaxy-note-10/firmware/SM-N970F/">SamMobile</a> or <a class="text-blue-700 underline" href="https://github.com/zacharee/SamloaderKotlin/releases">Bifrost</a></li>
                     <li>Patches the AP file for Odin</li>
-                    <li>Puts the BL, CP and CSC files next to it, ready for Odin</li>
+                    <li>Flashes it with Odin for you (download mode, loading the files, Start)</li>
                     <li>Afterwards, start the phone with <strong>Vol Up + Power</strong> (let go at the warning) to boot with root</li>
                 </ul>
             </div>
@@ -103,7 +103,7 @@
 
         <section class="text-sm text-gray-600 border-t pt-6">
             <p><strong>SHA-256</strong> of MagiskAuto-Package.zip (to check your download):</p>
-            <code class="block bg-gray-200 p-2 rounded break-all mt-1">64a9305b0950fac46901a17eafbded50b43e1169d24770c9c2f76d49fe913a1f</code>
+            <code class="block bg-gray-200 p-2 rounded break-all mt-1">7db9d9fe568f07d714c65f30ccbedb2eb8a9825fa68379e39936237582053c84</code>
             <p class="mt-4">MagiskAuto uses the official <a class="text-blue-700 underline" href="https://github.com/topjohnwu/Magisk">Magisk</a> app's own patching tools. It isn't affiliated with Magisk, Google or Samsung.</p>
         </section>
     </main>
