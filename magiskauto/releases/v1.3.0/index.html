@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagiskAuto v1.3.0 - AKKA INC</title>
+    <meta name="description" content="MagiskAuto v1.3.0: Windows .exe, Magisk patcher for Pixel 6a and Galaxy Note 10.">
+    <meta property="og:title" content="MagiskAuto v1.3.0">
+    <meta property="og:description" content="Windows .exe. Magisk patcher for Pixel 6a and Galaxy Note 10.">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center gap-4">
+            <a href="/" class="text-2xl font-bold">AKKA INC</a>
+            <ul class="flex gap-5">
+                <li><a href="/magiskauto/" class="hover:text-blue-300">MagiskAuto</a></li>
+                <li><a href="/magiskauto/releases/" class="hover:text-blue-300">Releases</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="bg-blue-800 text-white py-12 px-4">
+        <div class="container mx-auto max-w-3xl">
+            <a href="/magiskauto/releases/" class="text-blue-200 text-sm hover:text-white">← All releases</a>
+            <div class="flex flex-wrap items-baseline gap-3 mt-2">
+                <h1 class="text-4xl font-bold">MagiskAuto v1.3.0</h1>
+                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">Latest</span>
+            </div>
+            <p class="text-blue-100 mt-2">Released November 10, 2026</p>
+            <a href="MagiskAuto.exe" download
+               class="inline-block mt-6 bg-blue-600 text-white text-lg font-semibold px-8 py-4 rounded-full hover:bg-blue-700 shadow-lg">
+                Download MagiskAuto.exe
+            </a>
+            <p class="text-sm text-blue-200 mt-3">8.5 MB · Windows 10/11 (64-bit)</p>
+            <button id="copy" class="mt-2 text-sm underline text-blue-200 hover:text-white">Copy link to this release</button>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 py-10 max-w-3xl space-y-8">
+        <section>
+            <h2 class="text-2xl font-bold mb-3">What's new</h2>
+            <ul class="list-disc pl-5 space-y-2">
+                <li><strong>adb and fastboot are set up for you.</strong> The first time you run it, MagiskAuto offers to fetch Google's official platform-tools into a folder next to the exe. You don't need to download or unzip anything yourself.</li>
+                <li><strong>Clearer connection help.</strong> If the phone hasn't allowed USB debugging yet, it tells you to tap <em>Allow</em>. If Windows can't see the phone, it links to the Google and Samsung USB drivers.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold mb-3">You'll also need</h2>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>A phone with an <strong>unlocked bootloader</strong> and USB debugging turned on.</li>
+                <li>An internet connection the first time, to fetch platform-tools and the Magisk app.</li>
+                <li>If Windows doesn't see the phone: the <a class="text-blue-700 underline" href="https://developer.android.com/studio/run/win-usb">Google USB Driver</a> (Pixel) or the <a class="text-blue-700 underline" href="https://developer.samsung.com/android-usb-driver">Samsung USB Driver</a> (Note 10).</li>
+            </ul>
+            <p class="mt-3"><a href="/magiskauto/" class="text-blue-700 underline">Full instructions →</a></p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold mb-3">Known issues</h2>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>Windows SmartScreen warns that the app isn't signed. Click <strong>More info → Run anyway</strong>.</li>
+                <li>The phone has to be plugged in when MagiskAuto starts, even before you choose the firmware file.</li>
+            </ul>
+        </section>
+
+        <section class="text-sm text-gray-600 border-t pt-6">
+            <p><strong>SHA-256</strong> of MagiskAuto.exe:</p>
+            <code class="block bg-gray-200 p-2 rounded break-all mt-1">cf30716a95c8e01d03cf7d134a0b86183560af22363d5d254dd19705c1072f86</code>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-6">
+        <div class="container mx-auto text-center"><p>© 2026 AKKA INC. All rights reserved.</p></div>
+    </footer>
+
+    <script>
+        document.getElementById('copy').addEventListener('click', async function () {
+            const url = location.href.split('#')[0];
+            try { await navigator.clipboard.writeText(url); this.textContent = 'Link copied!'; }
+            catch (e) { this.textContent = url; }
+        });
+    </script>
+</body>
+</html>
