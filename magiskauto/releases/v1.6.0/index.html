@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagiskAuto v1.6.0 - AKKA INC</title>
+    <meta name="description" content="MagiskAuto v1.6.0: Windows .exe, Magisk patcher for Pixel 6a and Galaxy Note 10.">
+    <meta property="og:title" content="MagiskAuto v1.6.0">
+    <meta property="og:description" content="Windows .exe. Magisk patcher for Pixel 6a and Galaxy Note 10.">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+    <nav class="bg-blue-900 text-white p-4 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center gap-4">
+            <a href="/" class="text-2xl font-bold">AKKA INC</a>
+            <ul class="flex gap-5">
+                <li><a href="/magiskauto/" class="hover:text-blue-300">MagiskAuto</a></li>
+                <li><a href="/magiskauto/releases/" class="hover:text-blue-300">Releases</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="bg-blue-800 text-white py-12 px-4">
+        <div class="container mx-auto max-w-3xl">
+            <a href="/magiskauto/releases/" class="text-blue-200 text-sm hover:text-white">← All releases</a>
+            <div class="flex flex-wrap items-baseline gap-3 mt-2">
+                <h1 class="text-4xl font-bold">MagiskAuto v1.6.0</h1>
+                <span class="bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">Latest</span>
+            </div>
+            <p class="text-blue-100 mt-2">Released November 10, 2026</p>
+            <a href="MagiskAuto-Package.zip" download
+               class="inline-block mt-6 bg-blue-600 text-white text-lg font-semibold px-8 py-4 rounded-full hover:bg-blue-700 shadow-lg">
+                Download the package (.zip)
+            </a>
+            <p class="text-sm text-blue-200 mt-3">18 MB · MagiskAuto.exe + Magisk app + guide</p>
+            <button id="copy" class="mt-2 text-sm underline text-blue-200 hover:text-white">Copy link to this release</button>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 py-10 max-w-3xl space-y-8">
+        <section>
+            <h2 class="text-2xl font-bold mb-3">What's new</h2>
+            <ul class="list-disc pl-5 space-y-2">
+                <li><strong>Samsung USB Driver, automatically.</strong> For the Note 10, MagiskAuto downloads Samsung's official driver from developer.samsung.com, checks it's digitally signed by Samsung, then runs the installer.</li>
+                <li><strong>Odin found and opened for you.</strong> MagiskAuto looks for Odin next to itself and in Downloads, Desktop and Documents, including inside an Odin <code>.zip</code>, which it unzips. At the end it opens Odin and the folder with the files to load, and explains how to put the phone in download mode.</li>
+                <li>Includes everything from <a class="text-blue-700 underline" href="/magiskauto/releases/v1.5.0/">v1.5.0</a>: one package and one-step PC setup.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold mb-3">About Odin</h2>
+            <p class="text-gray-700">The Note 10 can't be flashed from the command line like the Pixel. It needs Samsung's Odin. Samsung doesn't publish Odin, so only unofficial copies exist, and MagiskAuto won't download and run one automatically. If you don't have it, MagiskAuto opens an <a class="text-blue-700 underline" href="https://xdaforums.com/search/?q=Odin3+v3.14.4&amp;t=post">XDA Developers search</a>. Save the Odin zip (e.g. Odin3 v3.14.4) to your Downloads folder and MagiskAuto does the rest.</p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold mb-3">Known issues</h2>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>Windows SmartScreen warns that the app isn't signed. Click <strong>More info → Run anyway</strong>.</li>
+                <li>The phone has to be plugged in when MagiskAuto starts, even before you choose the firmware file.</li>
+            </ul>
+        </section>
+
+        <section class="text-sm text-gray-600 border-t pt-6">
+            <p><strong>SHA-256</strong> of MagiskAuto-Package.zip:</p>
+            <code class="block bg-gray-200 p-2 rounded break-all mt-1">e1842b071f215cf77d1b6e0dab95b19e5c52ec196f9b74eb78a424888b341dec</code>
+            
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-6">
+        <div class="container mx-auto text-center"><p>© 2026 AKKA INC. All rights reserved.</p></div>
+    </footer>
+
+    <script>
+        document.getElementById('copy').addEventListener('click', async function () {
+            const url = location.href.split('#')[0];
+            try { await navigator.clipboard.writeText(url); this.textContent = 'Link copied!'; }
+            catch (e) { this.textContent = url; }
+        });
+    </script>
+</body>
+</html>
