@@ -26,12 +26,12 @@
             <h1 class="text-4xl font-bold mb-4">MagiskAuto</h1>
             <p class="text-lg mb-8">Root your <strong>Google Pixel 6a</strong> or <strong>Samsung Galaxy Note 10</strong> with Magisk.
                 It shows you where to download your phone's exact firmware, then extracts and patches it for you.</p>
-            <a href="releases/v1.7.3/MagiskAuto-Package.zip" download
+            <a href="releases/v1.7.4/MagiskAuto-Package.zip" download
                class="inline-block bg-blue-600 text-white text-lg font-semibold px-8 py-4 rounded-full hover:bg-blue-700 shadow-lg">
                 Download the MagiskAuto package
             </a>
             <p class="text-sm text-blue-200 mt-4">Everything in one zip: MagiskAuto.exe, the Magisk app and a quick-start guide</p>
-            <p class="text-sm text-blue-200 mt-1">Version 1.7.3 · 18 MB · Windows 10/11 (64-bit) · <a href="releases/" class="underline hover:text-white">All releases</a></p>
+            <p class="text-sm text-blue-200 mt-1">Version 1.7.4 · 18 MB · Windows 10/11 (64-bit) · <a href="releases/" class="underline hover:text-white">All releases</a></p>
             <button id="copy" class="mt-4 text-sm underline text-blue-200 hover:text-white">Copy link to share</button>
         </div>
     </section>
@@ -53,7 +53,7 @@
                 <li>On the phone, turn on <strong>USB debugging</strong>: <em>Settings → About phone</em>, tap <em>Build number</em> 7 times, then <em>Developer options → USB debugging</em>. Plug the phone into the PC and allow the connection.</li>
                 <li>Double-click <strong>MagiskAuto.exe</strong> and choose your phone. The first time, it gets your PC ready: it sets up <strong>adb and fastboot</strong> (Google's official <a class="text-blue-700 underline" href="https://developer.android.com/tools/releases/platform-tools">platform-tools</a>; just press Enter), installs the <strong>Google USB Driver</strong> for the Pixel, and installs the <strong>Samsung USB Driver</strong> (from Samsung) for the Note 10. Then it shows the link to the right firmware for your phone.</li>
                 <li>When the firmware has downloaded, drag the file into the MagiskAuto window and press Enter. It does the rest. The file can be in any folder, and you don't need to unzip it.</li>
-                <li>Your results are saved in a <code class="bg-gray-200 px-1 rounded">magisk-output</code> folder next to <code class="bg-gray-200 px-1 rounded">MagiskAuto.exe</code>, or in <code class="bg-gray-200 px-1 rounded">Documents\MagiskAuto</code> if it can't save there. You need about <strong>12 GB free</strong> for the Note 10, or 4 GB for the Pixel.</li>
+                <li>Your results are saved in a <code class="bg-gray-200 px-1 rounded">magisk-output</code> folder next to <code class="bg-gray-200 px-1 rounded">MagiskAuto.exe</code>, or in <code class="bg-gray-200 px-1 rounded">Documents\MagiskAuto</code> if it can't save there. You need about <strong>7 GB free on the PC</strong> for the Note 10, or 4 GB for the Pixel, besides the firmware download. The phone needs almost no space.</li>
             </ol>
             <p class="mt-4 text-sm text-gray-600"><strong>Note 10 only:</strong> flashing needs <strong>Odin</strong>, Samsung's flashing tool. Samsung doesn't publish it, so MagiskAuto doesn't download it automatically. Save an Odin zip (e.g. Odin3 v3.14.4 from <a class="text-blue-700 underline" href="https://xdaforums.com/search/?q=Odin3+v3.14.4&amp;t=post">XDA Developers</a>) to your Downloads folder. MagiskAuto finds it and does the flashing for you: it puts the phone in download mode, loads the files into Odin, checks every slot (the Magisk-patched file must be in AP), clicks Start and waits for PASS.</p>
             <p class="mt-2 text-sm text-gray-600">If Windows doesn't see the phone, install the <a class="text-blue-700 underline" href="https://developer.android.com/studio/run/win-usb">Google USB Driver</a> (Pixel) or the <a class="text-blue-700 underline" href="https://developer.samsung.com/android-usb-driver">Samsung USB Driver</a> (Note 10).</p>
@@ -103,7 +103,7 @@
 
         <section class="text-sm text-gray-600 border-t pt-6">
             <p><strong>SHA-256</strong> of MagiskAuto-Package.zip (to check your download):</p>
-            <code class="block bg-gray-200 p-2 rounded break-all mt-1">c6125560d251a85e9c1c2781aa8ece60f6a5c777a97180dbd662556c7f6fb864</code>
+            <code class="block bg-gray-200 p-2 rounded break-all mt-1">0a0f7649a02b767bb7bf36aa73f77814f81b2d9fc7bfebef68b463cce0d5e22b</code>
             <p class="mt-4">MagiskAuto uses the official <a class="text-blue-700 underline" href="https://github.com/topjohnwu/Magisk">Magisk</a> app's own patching tools. It isn't affiliated with Magisk, Google or Samsung.</p>
         </section>
     </main>
